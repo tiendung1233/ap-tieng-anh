@@ -13,6 +13,7 @@ function App() {
       <div className="app">
         <header>
           <h1>Ứng dụng học từ vựng tiếng Anh</h1>
+          <p>Design by Dung Nguyen Tien</p>
         </header>
         <main>
           <Routes>
@@ -25,7 +26,10 @@ function App() {
               path="/practice/:topicName"
               element={<PracticeWrapper data={vocabularyData} />}
             />
-
+            <Route
+              path="/flashcards/:topicName"
+              element={<FlashcardStudyWrapper data={vocabularyData} />}
+            />
           </Routes>
         </main>
       </div>
